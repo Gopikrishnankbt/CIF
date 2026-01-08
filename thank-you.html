@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Thank you for contacting the Core Instrumentation Facility. We'll get back to you shortly — find facility overview, booking, guidelines and training links here." />
+  <title>Thank You | Core Instrumentation Facility</title>
+  <style>
+    :root{
+      --bg-1: #0f2027;
+      --bg-2: #203a43;
+      --bg-3: #2c5364;
+      --card-bg: rgba(255,255,255,0.06);
+      --card-border: rgba(255,255,255,0.08);
+      --accent: #ffffff;
+      --muted: #dfe7ea;
+      --cta-bg: #ffffff;
+      --cta-color: #203a43;
+      --focus: 3px solid rgba(255,255,255,0.18);
+      --radius: 12px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: var(--accent);
+      background: linear-gradient(135deg, var(--bg-1), var(--bg-2), var(--bg-3));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding: 24px;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 12px;
+      top: 12px;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background: #fff;
+      color: #203a43;
+      border-radius: 6px;
+      z-index: 1000;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      background: var(--card-bg);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 36px;
+      text-align: center;
+      box-shadow: 0 12px 34px rgba(0,0,0,0.35);
+      border: 1px solid var(--card-border);
+    }
+
+    header h1 {
+      margin: 0 0 6px 0;
+      font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+      letter-spacing: 0.3px;
+    }
+    header p {
+      margin: 0 0 22px 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    /* Two-column layout on wider screens */
+    @media (min-width:640px){
+      .links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      background: var(--cta-bg);
+      color: var(--cta-color);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: transform 0.14s ease, box-shadow 0.14s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+    }
+    .links a:hover,
+    .links a:focus {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+      outline: none;
+    }
+    .links a:focus {
+      box-shadow: var(--focus);
+    }
+
+    /* Small icon circle */
+    .link-icon {
+      flex: 0 0 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02));
+      display: inline-grid;
+      place-items: center;
+      color: var(--cta-color);
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.88rem;
+      color: #d0d9dc;
+    }
+
+    /* Accessible focus visible */
+    a:focus-visible {
+      outline: 3px solid rgba(2,120,216,0.28);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <main id="main" class="container" role="main" aria-labelledby="thank-heading">
+    <header>
+      <h1 id="thank-heading">Thank you!</h1>
+      <p>
+        Thank you for contacting the <strong>Core Instrumentation Facility</strong>.
+        We appreciate your interest and will get back to you as soon as possible.
+      </p>
+    </header>
+
+    <nav aria-label="Helpful links" class="links">
+      <!-- Replace href="#" with actual paths or external URLs.
+           For external links keep target="_blank" and rel attributes as below. -->
+      <a href="#" aria-label="Facility overview – open in new tab" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon" aria-hidden="true">1</span>
+        <span>Facility Overview</span>
+      </a>
+
+      <a href="#" aria-label="Instrument booking – open in new tab" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon" aria-hidden="true">2</span>
+        <span>Instrument Booking</span>
+      </a>
+
+      <a href="#" aria-label="User guidelines – open in new tab" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon" aria-hidden="true">3</span>
+        <span>User Guidelines</span>
+      </a>
+
+      <a href="#" aria-label="Training and workshops – open in new tab" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon" aria-hidden="true">4</span>
+        <span>Training & Workshops</span>
+      </a>
+
+      <a href="#" aria-label="Contact and support – open in new tab" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon" aria-hidden="true">5</span>
+        <span>Contact / Support</span>
+      </a>
+    </nav>
+
+    <footer role="contentinfo" aria-label="Copyright">
+      © Core Instrumentation Facility
+    </footer>
+  </main>
+
+  <script>
+    // Focus the main region for screen reader users when loaded
+    (function(){
+      var main = document.getElementById('main');
+      if(main && typeof main.focus === 'function'){
+        main.setAttribute('tabindex','-1');
+        main.focus();
+      }
+    })();
+  </script>
+</body>
+</html>
