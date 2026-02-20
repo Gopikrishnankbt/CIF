@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CalClone | Smart Slot Booking</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1 id="page-title">Dashboard</h1>
+          <p id="page-subtitle">Manage bookings, events, and availability.</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="secondary" id="seed-btn">Seed Demo Data</button>
+          <button class="primary" id="create-event-btn">+ New Event Type</button>
+        </div>
+      </header>
+      <section id="page-content" class="page-content"></section>
+    </main>
+  </div>
+
+  <div id="modal-root"></div>
+
+  <template id="booking-template">
+    <div class="booking-layout card">
+      <div>
+        <h3>Book a Meeting</h3>
+        <p class="muted">Pick a date and time for <strong id="booking-event-name"></strong>.</p>
+        <label>Date
+          <input type="date" id="booking-date" />
+        </label>
+        <div id="timeslots" class="slot-grid"></div>
+      </div>
+      <form id="booking-form">
+        <h4>Your Details</h4>
+        <label>Name
+          <input type="text" name="name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" required />
+        </label>
+        <label>Notes
+          <textarea name="notes" rows="3" placeholder="Anything to share?"></textarea>
+        </label>
+        <button class="primary" type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
